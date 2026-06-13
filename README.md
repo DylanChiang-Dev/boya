@@ -80,4 +80,4 @@ cp -r liberal-arts-research-skills/skills/* .claude/skills/
 
 MIT License — 可自由使用、修改、再發布（含商用），保留版權聲明即可。
 
-工作流思路受以下公開項目與研究啟發，特此致謝：[academic-research-skills](https://github.com/Imbad0202/academic-research-skills)（誠信閘門與引用核驗理念）、The AI Scientist（Lu et al., *Nature* 2026）所揭示的全自動化失敗模式、Zhao et al.（2026）對幻覺引用的大規模實證。本倉庫所有內容為原創撰寫。
+工作流思路受以下公開項目與研究啟發，特此致謝：[academic-research-skills](https://github.com/Imbad0202/academic-research-skills)（誠信閘門與引用核驗理念）、The AI Scientist（Lu et al., 2024, arXiv:2408.06292，Sakana AI）所揭示的全自動化失敗模式、Zhao et al.（2026）對幻覺引用的大規模實證。本倉庫所有內容為原創撰寫。
