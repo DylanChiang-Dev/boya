@@ -4,9 +4,9 @@
 
 ### Liberal Arts Research Skills
 
-**給不會寫程式的研究者的 Claude Code 技能庫——從讀文獻到寫論文，一條人工帶路的工作流。**
+**給不會寫程式的研究者的 Claude Code / Codex 技能庫——從讀文獻到寫論文，一條人工帶路的工作流。**
 
-*A Claude Code skill collection for liberal-arts researchers — the full path from literature to thesis, no coding required.*
+*A Claude Code / Codex skill collection for liberal-arts researchers — the full path from literature to thesis, no coding required.*
 
 <br/>
 
@@ -87,27 +87,47 @@ flowchart TD
 
 ## 🚀 安裝
 
-### 方式一：一句話交給 Claude Code（推薦，不需要會終端機）
+### 方式一：一句話交給 Claude Code 或 Codex（推薦，不需要會終端機）
 
-打開 Claude Code，把這句話貼進去：
+打開 Claude Code 或 Codex，把這句話貼進去：
 
 ```
 幫我從 https://github.com/DylanChiang-Dev/liberal-arts-research-skills 安裝 citation-verify 技能
 ```
 
-它會自己下載倉庫、把技能檔放到正確位置、回報裝了什麼。預設裝到當前專案；想讓所有專案都能用，句尾加「**到全域技能目錄**」。新裝的 skill 在下次啟動 Claude Code 時生效。
+它會自己下載倉庫、把技能檔放到正確位置、回報裝了什麼。預設裝到當前專案；想讓所有專案都能用，句尾加「**到全域技能目錄**」。新裝的 skill 通常在下次啟動 Claude Code 或 Codex 時生效。
 
 > 💡 2026-06 實測通過；過程中它要動你的檔案時會先徵求同意，看一眼再按確認。想一次裝全部，把上面那句的 `citation-verify` 換成「**所有技能**」。
 
-### 方式二：手動複製（會用終端機的話）
+### 方式二：手動複製到 Codex（會用終端機的話）
+
+Codex 讀取 `.agents/skills` 與 `~/.agents/skills`。每個 skill 目錄只要包含 `SKILL.md` 就能被辨識。
 
 ```bash
 git clone https://github.com/DylanChiang-Dev/liberal-arts-research-skills.git
 
 # 全域安裝（所有專案可用）
+mkdir -p ~/.agents/skills
+cp -r liberal-arts-research-skills/skills/* ~/.agents/skills/
+
+# 或只裝到當前專案
+mkdir -p .agents/skills
+cp -r liberal-arts-research-skills/skills/* .agents/skills/
+```
+
+裝好後在 Codex 裡可用 `$citation-verify` 這類明確呼叫，也可以直接用自然語言觸發，例如：「幫我查核這份參考文獻的真偽」。
+
+### 方式三：手動複製到 Claude Code（會用終端機的話）
+
+```bash
+git clone https://github.com/DylanChiang-Dev/liberal-arts-research-skills.git
+
+# 全域安裝（所有專案可用）
+mkdir -p ~/.claude/skills
 cp -r liberal-arts-research-skills/skills/* ~/.claude/skills/
 
 # 或只裝到當前專案
+mkdir -p .claude/skills
 cp -r liberal-arts-research-skills/skills/* .claude/skills/
 ```
 
