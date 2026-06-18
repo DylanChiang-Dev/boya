@@ -97,49 +97,53 @@ flowchart TD
 
 ## 安装
 
-### 方式一：一句话交给 Claude Code 或 Codex
+### 方式一：手动复制整套 skills（推荐、最稳）
 
-打开 Claude Code 或 Codex，把这句话贴进去：
+Codex 读取 `.agents/skills` 与 `~/.agents/skills`；Claude Code 读取 `.claude/skills` 与 `~/.claude/skills`。每个 skill 目录只要包含 `SKILL.md` 就能被识别。
 
-```text
-帮我从 https://github.com/DylanChiang-Dev/boya 安装 citation-verify 技能
-```
-
-它会下载仓库、把 skill 文件放到合适位置、回报装了什么。想一次安装全部，把 `citation-verify` 换成“所有技能”。
-
-### 方式二：手动复制到 Codex
-
-Codex 读取 `.agents/skills` 与 `~/.agents/skills`。每个 skill 目录只要包含 `SKILL.md` 就能被识别。
+**Codex 全局安装（所有项目可用）**
 
 ```bash
 git clone https://github.com/DylanChiang-Dev/boya.git
 
-# 全局安装（所有项目可用）
 mkdir -p ~/.agents/skills
 cp -r boya/skills/* ~/.agents/skills/
+```
 
-# 或只安装到当前项目
+**Codex 项目安装（只给当前项目用）**
+
+```bash
 mkdir -p .agents/skills
 cp -r boya/skills/* .agents/skills/
 ```
 
 装好后在 Codex 里可用 `$citation-verify` 这类明确调用，也可以直接用自然语言触发，例如：“帮我核查这份参考文献的真伪”。
 
-### 方式三：手动复制到 Claude Code
+**Claude Code 全局安装（所有项目可用）**
 
 ```bash
-git clone https://github.com/DylanChiang-Dev/boya.git
-
-# 全局安装（所有项目可用）
 mkdir -p ~/.claude/skills
 cp -r boya/skills/* ~/.claude/skills/
+```
 
-# 或只安装到当前项目
+**Claude Code 项目安装（只给当前项目用）**
+
+```bash
 mkdir -p .claude/skills
 cp -r boya/skills/* .claude/skills/
 ```
 
 装好后在 Claude Code 里直接用自然语言触发，例如：“帮我核查这份参考文献的真伪”。
+
+### 方式二：请 agent 协助安装（不熟终端机时）
+
+如果你的 Claude Code / Codex 环境支持从 GitHub 读取并写入本机 skills 目录，可以把这句话贴给它：
+
+```text
+帮我从 https://github.com/DylanChiang-Dev/boya 安装全部 Boya skills 到全局技能目录；安装前先说明会写入哪些路径。
+```
+
+只想安装单一技能时，才把“全部 Boya skills”改成具体 skill 名，例如 `citation-verify`。
 
 ## 中国大陆高校使用注意
 

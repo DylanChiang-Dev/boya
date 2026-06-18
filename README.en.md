@@ -95,49 +95,53 @@ flowchart TD
 
 ## Installation
 
-### Option 1: Ask Claude Code or Codex
+### Option 1: Manually Copy the Full Skill Set
 
-Open Claude Code or Codex and paste:
+Codex reads skills from `.agents/skills` and `~/.agents/skills`. Claude Code reads skills from `.claude/skills` and `~/.claude/skills`. Each skill directory only needs a `SKILL.md` file.
 
-```text
-Install the citation-verify skill from https://github.com/DylanChiang-Dev/boya
-```
-
-To install all skills, replace `citation-verify` with `all skills`.
-
-### Option 2: Manual Install for Codex
-
-Codex reads skills from `.agents/skills` and `~/.agents/skills`. Each skill directory only needs a `SKILL.md` file.
+**Codex global install**
 
 ```bash
 git clone https://github.com/DylanChiang-Dev/boya.git
 
-# Global install
 mkdir -p ~/.agents/skills
 cp -r boya/skills/* ~/.agents/skills/
+```
 
-# Or project-local install
+**Codex project-local install**
+
+```bash
 mkdir -p .agents/skills
 cp -r boya/skills/* .agents/skills/
 ```
 
 After installation, call a skill explicitly, such as `$citation-verify`, or use natural language such as: "Check whether these references are real."
 
-### Option 3: Manual Install for Claude Code
+**Claude Code global install**
 
 ```bash
-git clone https://github.com/DylanChiang-Dev/boya.git
-
-# Global install
 mkdir -p ~/.claude/skills
 cp -r boya/skills/* ~/.claude/skills/
+```
 
-# Or project-local install
+**Claude Code project-local install**
+
+```bash
 mkdir -p .claude/skills
 cp -r boya/skills/* .claude/skills/
 ```
 
 After installation, use natural language in Claude Code, for example: "Check whether these references are real."
+
+### Option 2: Ask an Agent to Help
+
+If your Claude Code or Codex environment can read GitHub and write to your local skills directories, paste:
+
+```text
+Install all Boya skills from https://github.com/DylanChiang-Dev/boya into my global skills directory. Before installing, tell me which paths you will write to.
+```
+
+Use a single skill name such as `citation-verify` only when you intentionally want to install one skill instead of the full set.
 
 ## Notes for International Use
 

@@ -62,37 +62,51 @@
 
 ## インストール
 
-### Codex に手動インストール
+### 方法 1：12 個の skill を手動でコピーする
 
-Codex は `.agents/skills` と `~/.agents/skills` を読みます。各 skill ディレクトリには `SKILL.md` が入っています。
+Codex は `.agents/skills` と `~/.agents/skills` を読みます。Claude Code は `.claude/skills` と `~/.claude/skills` を読みます。各 skill ディレクトリには `SKILL.md` が入っています。
+
+**Codex 全体インストール**
 
 ```bash
 git clone https://github.com/DylanChiang-Dev/boya.git
 
-# 全体インストール
 mkdir -p ~/.agents/skills
 cp -r boya/skills/* ~/.agents/skills/
+```
 
-# または現在のプロジェクトだけにインストール
+**Codex プロジェクト内インストール**
+
+```bash
 mkdir -p .agents/skills
 cp -r boya/skills/* .agents/skills/
 ```
 
-### Claude Code に手動インストール
+**Claude Code 全体インストール**
 
 ```bash
-git clone https://github.com/DylanChiang-Dev/boya.git
-
-# 全体インストール
 mkdir -p ~/.claude/skills
 cp -r boya/skills/* ~/.claude/skills/
+```
 
-# または現在のプロジェクトだけにインストール
+**Claude Code プロジェクト内インストール**
+
+```bash
 mkdir -p .claude/skills
 cp -r boya/skills/* .claude/skills/
 ```
 
 インストール後は、`$citation-verify` のように明示的に呼び出すか、「この参考文献が実在するか確認して」のように自然言語で依頼できます。
+
+### 方法 2：agent にインストールを依頼する
+
+Claude Code または Codex が GitHub を読み、本機の skills ディレクトリに書き込める環境なら、次のように依頼できます。
+
+```text
+https://github.com/DylanChiang-Dev/boya から Boya の全 skill をグローバル skills ディレクトリにインストールしてください。実行前に書き込むパスを説明してください。
+```
+
+`citation-verify` など単一の skill 名を指定するのは、12 個すべてではなく 1 個だけ入れたい場合に限ります。
 
 ## 日本語環境で使うときの注意
 

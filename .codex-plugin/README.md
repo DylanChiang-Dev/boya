@@ -1,12 +1,12 @@
 # Codex 安裝說明
 
-Codex 可透過 plugin manifest 載入本庫，也可直接讀取 skills 目錄。
+Codex 可透過 plugin manifest 載入本庫，也可直接讀取 skills 目錄。一般本機使用以「直接安裝 skills」最簡單；plugin／marketplace 適合團隊分發或需要在 Codex plugin directory 裡管理時使用。
 
 ## 作為 plugin
 
 本庫提供 `.codex-plugin/plugin.json`，其中 `"skills": "./skills/"` 指向倉庫根目錄的 12 個 skill。
 
-若要透過 Codex plugin marketplace 分發，請把本倉庫作為 plugin source，並在 repo 或個人 marketplace 中加入 `boya` entry。
+若要透過 Codex plugin marketplace 分發，請把本倉庫作為 plugin source，並在 repo 或個人 marketplace 中加入 `boya` entry。這不是單一 skill 安裝；它會把 `skills/` 下的 12 個 Boya skills 作為一組提供。
 
 ## 直接安裝 skills
 
