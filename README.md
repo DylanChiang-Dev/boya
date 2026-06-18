@@ -16,7 +16,7 @@
 [![Forks](https://img.shields.io/github/forks/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=42a5f5)](https://github.com/DylanChiang-Dev/boya/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-4caf50?style=for-the-badge)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-12-7e57c2?style=for-the-badge)](#十二個-skill)
-[![version](https://img.shields.io/badge/version-0.1.0-7e57c2?style=for-the-badge)](MEMORY.md)
+[![version](https://img.shields.io/badge/version-0.2.0-7e57c2?style=for-the-badge)](MEMORY.md)
 [![繁體中文](https://img.shields.io/badge/繁體中文-First-e4002b?style=for-the-badge)](#)
 
 </div>
@@ -163,6 +163,7 @@ cp -r boya/skills/* .claude/skills/
 - **不編造**：所有 skill 內建「查無即標註、不確定即說明」的硬規則。
 - **用—磨—寫**：每個 skill 都先拿真實材料跑、把坑寫回規則，才升版號——不閉門造框架。
 - **中文優先**：為華語人文社科研究場景設計（含台灣學術環境的引用與政策語境）。
+- **輕量參考層**：`VERIFICATION.md` 彙總實測證據，`knowledge/` 放 venue 與中文學術寫作速查卡，`templates/` 放可填空論文與口試骨架。
 
 ## ⭐ Star 趨勢
 

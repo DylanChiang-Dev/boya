@@ -17,5 +17,8 @@
 | 「排成 APA／轉成 Chicago/MLA／統一引用格式／隨文引註跟文獻清單對不對得上」 | cite-format | 格式 | （格式後仍須先查核真偽） |
 | 「寫摘要／生成中英文摘要／abstract 怎麼寫／做關鍵詞」 | abstract-bilingual | 摘要 | 摘要是否忠實於定稿 |
 | 「我要寫論文，從頭帶我走／我現在該做什麼／研究流程怎麼跑／下一步用哪個 skill」 | research-roadmap | 導航 | 每一關的過關判斷 |
+| 「要論文結構模板／骨架／簡報範本」 | templates/ | 工具 | 結構選擇仍是你的 |
+| 「投稿去哪／期刊分級／venue」 | knowledge/venues.md | 工具 | 真實分級數據須你填，不可編造 |
+| 「這些 skill 實測過嗎／證據」 | VERIFICATION.md | 工具 | — |
 
 > 註：本表「觸發情境」為摘要；完整觸發語以各 SKILL.md description 為準，衝突時以 SKILL.md 為準。

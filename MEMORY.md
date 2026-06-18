@@ -2,6 +2,11 @@
 
 ## CHANGELOG
 
+### v0.2.0（2026-06-18）知識與模板版
+
+- 新增 VERIFICATION.md（驗證證據鏈）、knowledge/（venue 分級方法卡＋中文學術寫作範本卡）、templates/（三種論文結構＋口試簡報骨架）。
+- ROUTER／CONVENTIONS 同步收錄。
+
 ### v0.1.0（2026-06-18）結構版
 
 - 更名為博雅（Boya），四語 README 與 repo slug 同步。

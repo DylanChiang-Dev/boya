@@ -14,7 +14,7 @@ Languages: [繁體中文](README.md) | [简体中文](README.zh-CN.md) | [Englis
 [![Forks](https://img.shields.io/github/forks/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=42a5f5)](https://github.com/DylanChiang-Dev/boya/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-4caf50?style=for-the-badge)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-12-7e57c2?style=for-the-badge)](#the-12-skills)
-[![version](https://img.shields.io/badge/version-0.1.0-7e57c2?style=for-the-badge)](MEMORY.md)
+[![version](https://img.shields.io/badge/version-0.2.0-7e57c2?style=for-the-badge)](MEMORY.md)
 [![English](https://img.shields.io/badge/English-Ready-e4002b?style=for-the-badge)](#)
 
 </div>
@@ -201,6 +201,7 @@ Each skill has been tested on real research materials, including thesis referenc
 - **Use, test, revise:** rules are updated after running skills on real materials.
 - **Humanities and social sciences first:** built for interpretation-heavy research, not only lab-style workflows.
 - **Multilingual entry, single skill source:** README files may be localized, but the 12 skills remain one maintained set.
+- **Lightweight reference layer:** `VERIFICATION.md` summarizes tested evidence, `knowledge/` stores venue and Chinese academic-style reference cards, and `templates/` provides fill-in paper and defense skeletons.
 
 ## Versioning
 

@@ -14,7 +14,7 @@
 [![Forks](https://img.shields.io/github/forks/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=42a5f5)](https://github.com/DylanChiang-Dev/boya/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-4caf50?style=for-the-badge)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-12-7e57c2?style=for-the-badge)](#12-個の-skill)
-[![version](https://img.shields.io/badge/version-0.1.0-7e57c2?style=for-the-badge)](MEMORY.md)
+[![version](https://img.shields.io/badge/version-0.2.0-7e57c2?style=for-the-badge)](MEMORY.md)
 [![日本語](https://img.shields.io/badge/日本語-Lightweight-e4002b?style=for-the-badge)](#)
 
 </div>
@@ -42,6 +42,8 @@
 ## 12 個の skill
 
 同じ 12 個の skill を、繁体字中国語、簡体字中国語、英語、日本語、または混在した研究資料に対して使えます。skill 本文は 1 セットだけを維持し、言語別 README は入口として用意しています。
+
+`VERIFICATION.md` には実測の証拠、`knowledge/` には venue 分類と中文学術文体の参考カード、`templates/` には論文構成と口頭試問スライドの穴埋め骨格があります。
 
 | skill | 内容 | 段階 |
 |---|---|---|
