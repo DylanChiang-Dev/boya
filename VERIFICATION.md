@@ -13,6 +13,8 @@
 
 目前 12 個 Boya skills 均列為 **Stable**：不是因為「不會錯」，而是因為每個 skill 都至少經過一輪真實材料實測，並把失敗模式寫回規則。未來新增 skill 一律先從 Draft 或 Beta 開始，不可未測即標 Stable。
 
+- **venue-fit**（0.3.0 新增）：目前 **Draft**——僅有設計與 SKILL.md，尚未拿真實投稿材料跑過。升 Beta 條件：在 `examples/` 補 >=1 篇實跑真錄並校準 `evals/venue-fit.md`。
+
 ## Evidence Ledger 最小格式
 
 每次新增 example、修訂 skill 規則、或宣稱某個坑已被驗證時，至少留下這五欄。它是輕量證據帳，不是大型自動化研究系統。
