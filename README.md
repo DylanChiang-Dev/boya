@@ -2,13 +2,17 @@
 
 <div align="center">
 
-# 博雅 · 人文社科 AI 研究技能庫
+# 博雅 Boya
 
-### 文組生的 AI 研究工作流
+### 給文組／人文社科研究者的 AI 論文工作流
 
-**給不會寫程式的文組／人文社科研究者的 Claude Code / Codex 技能庫——從讀文獻到寫論文，一條人工帶路的工作流。**
+**不會寫程式，也可以用 Claude Code / Codex，把一篇論文從「模糊題目」一步步推到「可以交出去」。**
 
-*A Claude Code / Codex skill collection for liberal-arts researchers — the full path from literature to thesis, no coding required.*
+<strong>AI 做苦工，你做判斷。</strong><br/>
+Boya 幫你磨題、查引用、讀文獻、設計方法、搭大綱、修初稿、自我審查、準備口試與投稿對標；<br/>
+但不替你編文獻、不代寫結論、不幫你隱藏 AI 使用。
+
+*A Claude Code / Codex workflow for liberal-arts and social-science researchers — from vague idea to submission-ready paper, no coding required.*
 
 <br/>
 
@@ -23,13 +27,19 @@
 
 ---
 
-> 本倉庫是一套給文組研究者使用的 AI 研究 skill 庫，整理從磨題、查引用、讀文獻、研究設計、搭大綱、寫初稿、自我審查到口試準備的完整工作流。所有 skill 以真實研究材料實測打磨，可在 Claude Code / Codex 等支援 agent skills 的環境中使用。
+如果你正在寫論文，Boya 不是要把你變成工程師，而是把指導教授、研究方法課、投稿前檢查清單裡那些「沒人一次講清楚」的步驟，拆成 agent 可以陪你走的流程。
+
+你可以從這裡開始：
+
+- **題目太大**：把一個模糊想法縮成可研究問題。
+- **文獻太亂**：查引用真偽，整理文獻矩陣與綜述線索。
+- **初稿要交**：先自我審查、排引用格式、寫 AI 使用揭露，再準備口試或投稿。
 
 简体中文与中国大陆高校使用说明见 [README.zh-CN.md](README.zh-CN.md)。English and Japanese introductions are available in [README.en.md](README.en.md) and [README.ja.md](README.ja.md).
 
 完整使用手冊見 [GUIDE.md](GUIDE.md)：安裝後從哪裡開始、不同研究階段該用哪個 skill、templates / knowledge / evals 怎麼配合。
 
-一句話講清楚這個倉庫在做什麼：**把指導教授腦子裡那種「看三篇文獻就知道這題能不能做」的判斷，盡量拆成明白的規則與提問，寫成你隨時叫得動的流程。** 它縮小資訊差，但不替你做研究——
+一句話講清楚這個倉庫在做什麼：**把指導教授腦子裡那種「看三篇文獻就知道這題能不能做」的判斷，盡量拆成明白的規則與提問，寫成你隨時叫得動的流程。** 它縮小資訊差，但不替你做研究。
 
 ## 🧭 核心信念
 

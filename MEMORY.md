@@ -52,3 +52,4 @@
 - 2026-06-18：新增 `README.en.md` 英文完整入口與 `README.ja.md` 日文輕量入口；四個 README 互鏈。多語策略仍只翻譯公開入口，不複製 12 個 skill 正文，避免多份維護。
 - 2026-06-18：新增技能 **venue-fit v0.0.1 草稿（未實測）**（0.3.0「學位論文→期刊投稿」延伸第一個 skill）。投稿對標：按「索引/語種（SSCI/TSSCI/CSSCI）× 量化/質性」兩軸，拿定稿對標目標刊真實作者須知，輸出 must-fix/should-fix/待補 三級差距。鐵律：不內建/不生成任何期刊清單/IF/排名/須知，查不到標待補；對標≠代寫；質性不硬套 IMRaD；引用/揭露/摘要分別指向 cite-format/ai-disclosure/abstract-bilingual 不重做。附 templates/venue-fit-checklist.md、evals/venue-fit.md（基準輸入待補）、ROUTER 路由。設計見 plans/2026-06-18-博雅0.3.0投稿延伸設計.md。**未實測，不打 tag**；README（md/zh-CN/en/ja）skill 數 12→13 與升 Beta 留待真實案例實測後。
 - 2026-06-18：新增 `GUIDE.md` 繁中使用手冊，補足 README 與 ROUTER 之間的「人怎麼開始用」入口：說明適合對象、安裝後第一步、按研究階段選 skill、完整工作流、templates/knowledge/evals 用法、venue-fit Draft 狀態、誠信紅線、常見情境與維護者入口；`README.md` 增加一行手冊連結。暫不同步多語 README。
+- 2026-06-18：重寫 `README.md` 首屏推廣文案，明確面向文組／人文社科研究者截圖傳播：主標改為「博雅 Boya」、副標改為「給文組／人文社科研究者的 AI 論文工作流」，提前呈現「AI 做苦工，你做判斷」與三個使用場景（題目太大、文獻太亂、初稿要交）。
