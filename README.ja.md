@@ -13,15 +13,15 @@
 [![Stars](https://img.shields.io/github/stars/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=ffca28)](https://github.com/DylanChiang-Dev/boya/stargazers)
 [![Forks](https://img.shields.io/github/forks/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=42a5f5)](https://github.com/DylanChiang-Dev/boya/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-4caf50?style=for-the-badge)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-14-7e57c2?style=for-the-badge)](#14-個の-skill)
-[![version](https://img.shields.io/badge/version-0.4.0-7e57c2?style=for-the-badge)](MEMORY.md)
+[![Skills](https://img.shields.io/badge/skills-15-7e57c2?style=for-the-badge)](#15-個の-skill)
+[![version](https://img.shields.io/badge/version-0.5.0-7e57c2?style=for-the-badge)](MEMORY.md)
 [![日本語](https://img.shields.io/badge/日本語-Lightweight-e4002b?style=for-the-badge)](#)
 
 </div>
 
 ---
 
-> このリポジトリは、人文・社会科学系の研究者が AI エージェントを研究補助として使うための skill 集です。14 個の skill は、研究テーマを絞る、引用文献を確認する、文献を読む、理論枠組みを定める、研究方法を設計する、論文の骨格を作る、文章を整える、自己レビューする、引用形式を整える、AI 利用を説明する、といった作業を担当します。
+> このリポジトリは、人文・社会科学系の研究者が AI エージェントを研究補助として使うための skill 集です。15 個の skill は、研究テーマを絞る、文献を探索する、引用文献を確認する、文献を読む、理論枠組みを定める、研究方法を設計する、論文の骨格を作る、文章を整える、自己レビューする、引用形式を整える、AI 利用を説明する、といった作業を担当します。
 
 中心にある考え方は単純です。**AI に作業を任せても、研究判断は人間が持つ。** AI は文献を探す手がかりを出し、表を作り、質問を投げ、形式を整えることはできます。しかし、研究課題、方法、解釈、最終的な主張は研究者自身が決める必要があります。
 
@@ -39,15 +39,16 @@
 - **隠すのではなく説明する。** AI 利用は、必要に応じて正直に説明できる形で残します。
 - **一発自動生成ではない。** このリポジトリは「論文自動生成機」ではなく、人間が進行方向を決めるためのワークフローです。
 
-## 14 個の skill
+## 15 個の skill
 
-同じ 14 個の skill を、繁体字中国語、簡体字中国語、英語、日本語、または混在した研究資料に対して使えます。skill 本文は 1 セットだけを維持し、言語別 README は入口として用意しています。
+同じ 15 個の skill を、繁体字中国語、簡体字中国語、英語、日本語、または混在した研究資料に対して使えます。skill 本文は 1 セットだけを維持し、言語別 README は入口として用意しています。
 
 `VERIFICATION.md` には実測の証拠、`knowledge/` には venue 分類と中文学術文体の参考カード、`templates/` には論文構成と口頭試問スライドの穴埋め骨格があります。
 
 | skill | 内容 | 段階 |
 |---|---|---|
 | [`topic-refine`](skills/topic-refine) | 研究テーマを絞り込む。問いの意識、発散、収束、実現可能性、指導教員風の問い直しを扱います。 | テーマ |
+| [`lit-discovery`](skills/lit-discovery) | 研究の問いを検索戦略に分解し、OpenAlex / Crossref / Semantic Scholar から**要確認の候補リスト**を収集して関連度で層別し、確認・読解へ引き継ぎます。捏造せず、カバーされない文献は手動検索用に印を付けます。 | 文献確認 |
 | [`citation-verify`](skills/citation-verify) | Crossref / OpenAlex / Semantic Scholar などで文献の存在確認を補助し、DOI ミス、著者名の分割、疑わしい引用を見つけます。 | 文献確認 |
 | [`lit-matrix`](skills/lit-matrix) | 文献を主張・証拠・方法・反論可能性に分けて読み、比較表やレビュー地図を作ります。 | 文献読解 |
 | [`framework-build`](skills/framework-build) | 文献地図から候補となる理論枠組みを並べ、何を説明するか、理論上の代償、手元の文献による支えを確認し、主枠組みは研究者が決めるところで停止します。 | 理論枠組み |
@@ -64,7 +65,7 @@
 
 ## インストール
 
-### 方法 1：agent に 14 個の skill をインストールしてもらう
+### 方法 1：agent に 15 個の skill をインストールしてもらう
 
 Claude Code、Codex、または CC Switch に次のように依頼します。
 
@@ -78,9 +79,9 @@ https://github.com/DylanChiang-Dev/boya から Boya の全 skill をインスト
 - Codex：全体 `~/.agents/skills/`；プロジェクト内 `.agents/skills/`；Codex の組み込み `$skill-installer` を使う場合は `$CODEX_HOME/skills/`（よくある既定値は `~/.codex/skills/`）に書き込むこともあります
 - CC Switch：全体 `~/.cc-switch/skills/`
 
-`citation-verify` など単一の skill 名を指定するのは、14 個すべてではなく 1 個だけ入れたい場合に限ります。
+`citation-verify` など単一の skill 名を指定するのは、15 個すべてではなく 1 個だけ入れたい場合に限ります。
 
-### 方法 2：14 個の skill を手動でコピーする
+### 方法 2：15 個の skill を手動でコピーする
 
 各 skill ディレクトリには `SKILL.md` が入っています。
 

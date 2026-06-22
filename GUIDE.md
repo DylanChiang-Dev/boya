@@ -49,6 +49,7 @@ Boya 不適合用來做這些事：
 | 你現在想做什麼 | 優先使用 |
 |---|---|
 | 題目太大、太散、不知道能不能做 | `topic-refine` |
+| 有題目、還沒文獻清單，要先找該讀哪些 paper | `lit-discovery`（Draft） |
 | 檢查參考文獻是不是真的存在 | `citation-verify` |
 | 讀幾篇文獻、整理共識與分歧 | `lit-matrix` |
 | 文獻讀完，要把理論透鏡／主框架定下來 | `framework-build` |
@@ -71,6 +72,7 @@ Boya 不適合用來做這些事：
 
 ```text
 topic-refine
+→ lit-discovery
 → citation-verify
 → lit-matrix
 → framework-build

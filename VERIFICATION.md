@@ -11,10 +11,11 @@
 | Beta | 可用但仍在磨 | 已有實測或局部案例，但邊界條件、地區語境或資料類型仍需要更多回歸 |
 | Draft | 草稿 | 只有設計或少量試跑，尚未形成可依賴的實測證據鏈 |
 
-目前 12 個 Boya skills 列為 **Stable**，`venue-fit` 列為 **Beta**，`framework-build` 列為 **Draft**：不是因為「不會錯」，而是因為 Stable skill 至少經過一輪真實材料實測，並把失敗模式寫回規則；`venue-fit` 已有一份真實投稿對標案例，但仍需要更多學科、語種與期刊類型案例才能升 Stable。未來新增 skill 一律先從 Draft 或 Beta 開始，不可未測即標 Stable。
+目前 12 個 Boya skills 列為 **Stable**，`venue-fit` 列為 **Beta**，`framework-build`、`lit-discovery` 列為 **Draft**：不是因為「不會錯」，而是因為 Stable skill 至少經過一輪真實材料實測，並把失敗模式寫回規則；`venue-fit` 已有一份真實投稿對標案例，但仍需要更多學科、語種與期刊類型案例才能升 Stable。未來新增 skill 一律先從 Draft 或 Beta 開始，不可未測即標 Stable。
 
 - **venue-fit**（0.3.0 新增）：目前 **Beta**——已用作者碩論對標《公共行政學報》真實投稿規範，見 `examples/2026-06-18-venuefit-thesis-jpa.md`。升 Stable 條件：再補至少 1 個不同語種或不同學科投稿案例，並確認「不猜作者須知」「學位論文轉期刊先判文稿類型」規則可重複成立。
-- **framework-build**（0.X.0 新增）：目前 **Draft**——已有 1 份真實 JASM 課題定錨案例（`examples/2026-06-21-framework-jasm.md`），但理論框架定錨橫跨學科差異大，升 Beta 需再補至少 1 個不同學科（如人文思辨型「理論視角」而非社科「概念框架」）的定錨案例，確認「分學科分流」「不堆框架沙拉」「庫外框架標需補」可重複成立。
+- **framework-build**（0.X.0 新增，2026-06-22 升 0.0.2 實測）：目前仍 **Draft**——已有 2 份真實定錨案例：JASM 國際關係／經濟安全（`examples/2026-06-21-framework-jasm.md`）與作者碩論文組實證／混合方法（`examples/2026-06-22-framework-thesis.md`，固化「偽並列主框架／隱性遷移代價／混合方法漏質性抓手」三坑）。**兩例皆社科「概念框架」型**，故未升 Beta：升 Beta 仍需補至少 1 個**人文思辨型「理論視角」**（非概念框架）的定錨案例，確認「分學科分流」可重複成立。「不堆框架沙拉」「庫外框架標需補」已在兩個社科案例上重複驗過。
+- **lit-discovery**（0.5.0 新增）：目前 **Draft**——已有 1 份真實探勘案例（`examples/2026-06-21-litdiscovery-genai-public-sector.md`，公部門×生成式 AI，實打 OpenAlex／Crossref）。升 Beta 需再補至少 1 個不同學科或以中文文獻為主的探勘案例，確認「候選全來自真實命中」「中文查無標 ❓ 不硬湊」「弱相關不靜默丟棄」「候選只交棒不冒充已查證」可重複成立。
 
 ## Evidence Ledger 最小格式
 
@@ -91,6 +92,34 @@ Boya 維持人文社科研究者可讀、可手動介入的技能庫，不把每
 | topic-refine | 0.0.3 | 2026-06-21 | 兩岸關係題＋STORM 五透鏡發散 | 利益透鏡易發無源事實、透鏡撐爆清單、懷疑者最救命 | examples/2026-06-21-topicrefine-storm-lens.md |
 | self-review | 0.0.3 | 2026-06-21 | 教學章稿審查報告＋收尾自評 | 信心分數誘導裝權威、偏誤須分合理留白／假嚴格、缺席視角接文稿類型表 | examples/2026-06-21-selfreview-storm-lens.md |
 | lit-matrix | 0.0.3 | 2026-06-21 | 碩論 5 篇＋盲點缺口框法 | 盲點易滑成「首創」腦補、缺口要扣 RQ 需要的面向 | examples/2026-06-21-litmatrix-storm-lens.md |
+| lit-discovery | 0.5.0 Draft | 2026-06-21 | 公部門×生成式 AI，實打 OpenAlex／Crossref | 模糊檢索噪音、高被引≠相關、同論文多 DOI 副本、中文覆蓋稀疏夾離題、Crossref 回非論文 grant | examples/2026-06-21-litdiscovery-genai-public-sector.md |
+| framework-build | 0.0.2 Draft | 2026-06-22 | 作者碩論（立委助理×生成式 AI，TAM＋科技壓力＋社會影響），文獻已過 lit-matrix | 偽並列主框架（平鋪≠並列地位）、隱性遷移代價（✅支撐≠免遷移）、混合方法漏質性抓手 | examples/2026-06-22-framework-thesis.md |
+
+## Evidence Ledger 紀錄（2026-06-22 framework-build 文組實證題實測）
+
+### 2026-06-22 · framework-build · 平鋪三理論不等於三並列主框架
+
+- claim: 文獻／關鍵詞把數個理論平鋪並列，不代表它們是並列主框架；主框架仍最多一個。
+- source: examples/2026-06-22-framework-thesis.md（作者碩論，官方關鍵詞平鋪 TAM／科技壓力／社會影響）。
+- check: 試跑順著關鍵詞排列把三者擺成三並列主框架＝框架沙拉隱形版；改為追問哪個扣題最直接（TAM），餘二降中介並說清補哪塊盲區後重跑。
+- result: 通過。單一主框架 TAM，科技壓力＋社會影響為中介，分工說得清。
+- next: 已寫回 SKILL.md 鐵律 3 與 eval（MUST NOT 因平鋪列出擺成並列主框架）。
+
+### 2026-06-22 · framework-build · ✅ 庫存支撐不等於免遷移
+
+- claim: 框架有真文獻支撐（✅）只證書目為真，不證它能無痕套到新對象；老框架套新技術要標遷移代價。
+- source: examples/2026-06-22-framework-thesis.md（TAM＝Davis 1989，案例 001 已查證書目）。
+- check: 試跑把 TAM 當「拿來即用」；核對其 PU/PEOU 為確定性 mainframe IT 建，接不住生成式 AI 的幻覺／不確定性（呼應 lit-matrix 缺口「生成式 AI 技術特殊性」），改在理論代價欄標世代遷移成本。
+- result: 通過。理論代價欄明列遷移成本，未靜默套用。
+- next: 已寫回 SKILL.md 鐵律 1 延伸與 eval（MUST NOT 把 ✅ 當免遷移）。
+
+### 2026-06-22 · framework-build · 混合方法的實證抓手要雙棲
+
+- claim: 混合方法題，每個關鍵概念要同時給「問卷怎麼測」與「訪談怎麼追」兩種實證抓手，不得只列可量化指標。
+- source: examples/2026-06-22-framework-thesis.md（碩論＝212 問卷＋6 深度訪談）。
+- check: 試跑只給 PU/PEOU／壓力量表等可量化抓手，漏了質性訪談那半＝框架與質性兩張皮；改為每概念分排「問卷／訪談」兩種抓手後重跑。
+- result: 通過。實證抓手依方法形態分排，量化與質性兩腿都接得住，交棒 method-design（案例 006）不漏。
+- next: 已寫回 SKILL.md 鐵律 5 與 eval（MUST 混合方法雙棲抓手）。
 
 ## Evidence Ledger 紀錄（2026-06-21 STORM 啟發吸收）
 
@@ -119,3 +148,15 @@ Boya 維持人文社科研究者可讀、可手動介入的技能庫，不把每
 - check: 試跑把「立法幕僚場景沒人碰」誤報成「本研究首創」；改為「目前 5 篇未覆蓋，請擴大檢索確認」後重跑。
 - result: 通過。缺口扣「RQ 需要 × 這批是否覆蓋」兩欄，未腦補不存在文獻。
 - next: 已寫回 SKILL.md 第 4 步缺口處與 eval（含 MUST NOT 腦補首創）；升 0.0.3。
+
+## Evidence Ledger 紀錄（2026-06-21 lit-discovery 新增，借鑒 frontier-tracker）
+
+> 評估 `LiAngsong98/frontier-tracker`（自動化文獻週報 pipeline）：其無人值守 cron、持久狀態、Python 腳本、排名匯入皆撞本庫設計邊界，**整套架構不採用**；只取「從研究問題撈候選文獻」這一概念缺口，改寫成散文、人在環中、無狀態的 `lit-discovery`，補進階段 2「找文獻」（探勘→查核→讀）。
+
+### 2026-06-21 · lit-discovery · 候選全來自真實命中、中文查無標 ❓ 不硬湊
+
+- claim: discovery 場景幻覺風險最高；候選必須對應真實 API 回應，中文覆蓋不到一律 ❓待人工，不得腦補「沒人做過」。
+- source: examples/2026-06-21-litdiscovery-genai-public-sector.md（公部門×生成式 AI，實打 OpenAlex／Crossref）。
+- check: OpenAlex `title.search` 中文關鍵詞「立法委員助理」count=2 且夾一筆離題日文；英文題撈到真候選但混入 cybersecurity 離題高被引、techrxiv 同論文兩個 DOI、Crossref 一筆 EU grant 非論文。
+- result: 通過。候選全為真實命中、無捏造；中文標 ❓導向華藝/國圖；弱相關（cybersecurity）標 ⚪ 低保留未砍；非論文 grant 剔除。
+- next: 已寫回 SKILL.md 鐵律＋已知陷阱 1–5 與 eval（MUST NOT 編造/冒充已查證/靜默丟棄/腦補首創）；列 0.5.0 Draft，升 Beta 待補不同學科或中文為主案例。

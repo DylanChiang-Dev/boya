@@ -2,6 +2,20 @@
 
 ## CHANGELOG
 
+### main（2026-06-22）framework-build 0.0.1 Draft→0.0.2（文組實證題實測）
+
+- `framework-build` 0.0.1 Draft→**0.0.2 實測打磨**：拿作者碩論（立委助理×生成式 AI，TAM＋科技壓力＋社會影響）跑首個**文組實證／混合方法**題，補上先前唯一案例（JASM）的國際關係偏向。接 lit-matrix 案例 002 產出、交棒 method-design 案例 006，全鏈仍收在同一本碩論。
+- 三個文組獨有坑寫回 SKILL.md／eval：①**偽並列主框架**——摘要關鍵詞把三理論平鋪，一度被擺成三並列主框架＝框架沙拉隱形版，紀律＝選扣題最直接者（TAM）為唯一主框架、餘降中介（鐵律 3）；②**隱性遷移代價**——TAM 有 Davis 1989 確鑿支撐卻一度被當「拿來即用」，但 PU/PEOU 為確定性 mainframe 建、接不住生成式 AI 的不確定性，紀律＝✅ 支撐≠免遷移、理論代價欄標世代遷移（鐵律 1 延伸）；③**混合方法漏質性抓手**——一度只給可量化抓手漏了 6 場訪談那半，紀律＝每概念雙棲抓手（問卷測＋訪談追，鐵律 5）。
+- 配套：新增 `examples/2026-06-22-framework-thesis.md` 真錄；eval 補第二基準輸入＋兩條 MUST／兩條 MUST NOT／三個坑；`VERIFICATION.md` 補一行。frontmatter 不帶版本（版本走倉庫 tag），未動 README badge／skill 計數（framework-build 已計入 14/15）。
+
+### v0.5.0（2026-06-21）借鑒 frontier-tracker，新增 lit-discovery 文獻探勘
+
+- 評估 `LiAngsong98/frontier-tracker`（自動化文獻週報 pipeline）：其無人值守 cron、`state/` 持久狀態、Python 腳本、CAS/JCR 排名匯入、Excel/Obsidian 渲染**全撞本庫設計邊界，整套架構不採用**；只取它 `scan` 階段「從研究問題撈該讀的候選文獻」這一**概念缺口**——博雅階段 2「找文獻」原本只有 `citation-verify`（查已引的），沒有 skill 幫使用者先找到那批文獻。
+- 版本依 AGENTS.md 規則升 v0.5.0：`lit-discovery` 是新增 skill，屬 `0.X.0` 發布。
+- 新增 `lit-discovery`（文獻探勘）**Draft**：研究問題→拆檢索策略→OpenAlex/Crossref/S2 匿名端點撈**待核候選**→相關性分層（🟢高/🟡中/⚪低/❓待人工）→交棒 citation-verify 查真偽、lit-matrix 精讀。保留 frontier-tracker 的三路 API 與分層篩選**概念**，但改寫成散文、無狀態、人在環中；不做排程、不存狀態、不匯排名。
+- 新增 `evals/lit-discovery.md`、`templates/lit-search-strategy.md`、`examples/2026-06-21-litdiscovery-genai-public-sector.md`。實打 OpenAlex/Crossref 固化 5 個坑：模糊檢索噪音、高被引≠相關、同論文多 DOI 副本、OpenAlex 中文覆蓋稀疏夾離題、Crossref 回非論文 grant 記錄。
+- `research-roadmap` 階段 2 由 `citation-verify` 改為 `lit-discovery`→（接力）`citation-verify`，產出物「候選清單→帶驗證狀態清單」；ROUTER 在 citation-verify 列前插入 lit-discovery；VERIFICATION 狀態表＋Evidence Ledger 各補一行（lit-discovery Draft）。四語 README skill 計數 14→15、工作流 mermaid 與 skill 清單同步接入；GUIDE 階段說明補探勘。**升 Beta 待補不同學科或中文為主的探勘案例。**
+
 ### main（2026-06-21）吸收 STORM 啟發到三個既有 skill（0.0.3）
 
 - 評估 Stanford STORM 方法：其招牌機制「模擬 5 個專家視角生成議題認識」直撞本庫誠信鐵律與「不採無人值守 pipeline」邊界，**整套不採用、不新增 storm skill**；只取「多角度逼問題／自我體檢」骨架，落進三個既有 skill，產出全鎖成 🤖 待核問題。

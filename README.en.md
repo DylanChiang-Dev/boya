@@ -13,8 +13,8 @@ Languages: [繁體中文](README.md) | [简体中文](README.zh-CN.md) | [Englis
 [![Stars](https://img.shields.io/github/stars/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=ffca28)](https://github.com/DylanChiang-Dev/boya/stargazers)
 [![Forks](https://img.shields.io/github/forks/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=42a5f5)](https://github.com/DylanChiang-Dev/boya/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-4caf50?style=for-the-badge)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-14-7e57c2?style=for-the-badge)](#the-14-skills)
-[![version](https://img.shields.io/badge/version-0.4.0-7e57c2?style=for-the-badge)](MEMORY.md)
+[![Skills](https://img.shields.io/badge/skills-15-7e57c2?style=for-the-badge)](#the-15-skills)
+[![version](https://img.shields.io/badge/version-0.5.0-7e57c2?style=for-the-badge)](MEMORY.md)
 [![English](https://img.shields.io/badge/English-Ready-e4002b?style=for-the-badge)](#)
 
 </div>
@@ -43,12 +43,12 @@ The core idea: **make tacit supervisor-like judgment more explicit.** These skil
 
 ## Workflow Map
 
-From a rough idea to a thesis or paper ready for submission, the 14 skills each cover one part of the workflow. `research-roadmap` sits above them as the navigator.
+From a rough idea to a thesis or paper ready for submission, the 15 skills each cover one part of the workflow. `research-roadmap` sits above them as the navigator.
 
 ```mermaid
 flowchart TD
     Start([An idea]) --> S1[Refine topic<br/>topic-refine]
-    S1 --> S2[Find and check sources<br/>citation-verify]
+    S1 --> S2[Find and check sources<br/>lit-discovery→citation-verify]
     S2 --> S3[Read literature<br/>lit-matrix]
     S3 --> SF[Anchor framework<br/>framework-build]
     SF --> S4[Design methods<br/>method-design]
@@ -64,15 +64,16 @@ flowchart TD
     RM -.what must only I decide?.-> S10
 ```
 
-## The 14 Skills
+## The 15 Skills
 
-> **Eleven core skills** + **two final-stage skills** + **one navigator** = **14 skills**. Twelve are Stable, `venue-fit` is Beta, and `framework-build` is Draft.
+> **Twelve core skills** + **two final-stage skills** + **one navigator** = **15 skills**. Twelve are Stable, `venue-fit` is Beta, and `framework-build` and `lit-discovery` are Draft.
 
 ### Core Skills
 
 | skill | What it does | Stage |
 |---|---|---|
 | [`topic-refine`](skills/topic-refine) | Socratic topic refinement: problem awareness, bounded divergence, three convergence questions (new / feasible / who cares), supervisor-style questioning, and a one-page research-question brief. | Topic |
+| [`lit-discovery`](skills/lit-discovery) | Literature discovery: turns a research question into a search strategy, pulls a **to-verify candidate list** from OpenAlex / Crossref / Semantic Scholar, sorts by relevance tier, and hands off to verification and reading. Never fabricates; marks uncovered items for manual search. | Sources |
 | [`citation-verify`](skills/citation-verify) | Citation verification with Crossref, OpenAlex, Semantic Scholar, and related public sources. Flags wrong DOIs, split names, suspicious references, and items that need manual source checking. | Sources |
 | [`lit-matrix`](skills/lit-matrix) | Close reading and literature matrices: claim / evidence / method / challenge notes, cross-paper comparison, and literature-review dialogue maps. | Reading |
 | [`framework-build`](skills/framework-build) | Theoretical framework anchoring: turns a literature map into candidate frameworks, compares what each explains, its theoretical cost, and evidence support, recommends a layered structure, and stops at a hard gate for you to choose the main framework. | Framework |
@@ -225,6 +226,7 @@ Validation status has three levels: `Draft` (designed but not yet evidence-backe
 | 012 | [research-roadmap across the full workflow](examples/2026-06-14-researchroadmap-workflow.md) | Avoided becoming a process reciter by locating stages through actual outputs. |
 | 013 | [venue-fit on a thesis and Journal of Public Administration](examples/2026-06-18-venuefit-thesis-jpa.md) | Confirmed that venue-fit must not invent author guidelines and must first detect the thesis-to-journal genre gap. |
 | 014 | [framework-build anchors a Japan-Taiwan semiconductor framework](examples/2026-06-21-framework-jasm.md) | Captures framework anchoring rules: no framework salad, no invented load-bearing literature, and a hard gate for the researcher’s main-framework choice. |
+| 015 | [lit-discovery on generative AI in the public sector](examples/2026-06-21-litdiscovery-genai-public-sector.md) | Real OpenAlex/Crossref run: every candidate from a real hit, Chinese-coverage gaps marked for manual search, low-relevance kept not dropped, non-article grant records filtered out. |
 
 ## Design Principles
 
@@ -232,7 +234,7 @@ Validation status has three levels: `Draft` (designed but not yet evidence-backe
 - **No fabrication:** missing or uncertain information must be marked, not invented.
 - **Use, test, revise:** rules are updated after running skills on real materials.
 - **Humanities and social sciences first:** built for interpretation-heavy research, not only lab-style workflows.
-- **Multilingual entry, single skill source:** README files may be localized, but the 14 skills remain one maintained set.
+- **Multilingual entry, single skill source:** README files may be localized, but the 15 skills remain one maintained set.
 - **Lightweight reference layer:** `VERIFICATION.md` summarizes tested evidence, `knowledge/` stores venue and Chinese academic-style reference cards, and `templates/` provides fill-in paper and defense skeletons.
 - **No heavy automation framework:** Boya does not adopt `_shared/` fragments, `manifest.yaml` loading, or long-running multi-agent orchestration unless a specific skill becomes too large to read directly.
 
