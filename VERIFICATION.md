@@ -14,7 +14,7 @@
 目前 12 個 Boya skills 列為 **Stable**，`venue-fit` 列為 **Beta**，`framework-build`、`lit-discovery` 列為 **Draft**：不是因為「不會錯」，而是因為 Stable skill 至少經過一輪真實材料實測，並把失敗模式寫回規則；`venue-fit` 已有一份真實投稿對標案例，但仍需要更多學科、語種與期刊類型案例才能升 Stable。未來新增 skill 一律先從 Draft 或 Beta 開始，不可未測即標 Stable。
 
 - **venue-fit**（0.3.0 新增）：目前 **Beta**——已用作者碩論對標《公共行政學報》真實投稿規範，見 `examples/2026-06-18-venuefit-thesis-jpa.md`。升 Stable 條件：再補至少 1 個不同語種或不同學科投稿案例，並確認「不猜作者須知」「學位論文轉期刊先判文稿類型」規則可重複成立。
-- **framework-build**（0.X.0 新增，2026-06-22 升 0.0.2 實測）：目前仍 **Draft**——已有 2 份真實定錨案例：JASM 國際關係／經濟安全（`examples/2026-06-21-framework-jasm.md`）與作者碩論文組實證／混合方法（`examples/2026-06-22-framework-thesis.md`，固化「偽並列主框架／隱性遷移代價／混合方法漏質性抓手」三坑）。**兩例皆社科「概念框架」型**，故未升 Beta：升 Beta 仍需補至少 1 個**人文思辨型「理論視角」**（非概念框架）的定錨案例，確認「分學科分流」可重複成立。「不堆框架沙拉」「庫外框架標需補」已在兩個社科案例上重複驗過。
+- **framework-build**（0.X.0 新增，2026-06-22 升 0.1.0 Beta）：目前 **Beta**——已有 3 份真實定錨案例：JASM 國際關係／經濟安全（`examples/2026-06-21-framework-jasm.md`）、作者碩論文組實證／混合方法（`examples/2026-06-22-framework-thesis.md`，固化偽並列主框架／隱性遷移代價／混合方法漏質性抓手三坑）、**人文思辨型 LLM silicon sampling 知識論**（`examples/2026-06-22-framework-humanist.md`，固化思辨版框架沙拉／人文型操作化＝分析維度／跨域遷移代價／跨哲學子域預警四坑）。三例覆蓋「概念框架」與「理論視角」兩個分流，eval MUST #1「分學科分流」已驗。升 Stable 條件：再補至少 1 個政策分析型「分析框架」案例，確認三分流全覆蓋且主要 MUST/MUST NOT 可重複。
 - **lit-discovery**（0.5.0 新增）：目前 **Draft**——已有 1 份真實探勘案例（`examples/2026-06-21-litdiscovery-genai-public-sector.md`，公部門×生成式 AI，實打 OpenAlex／Crossref）。升 Beta 需再補至少 1 個不同學科或以中文文獻為主的探勘案例，確認「候選全來自真實命中」「中文查無標 ❓ 不硬湊」「弱相關不靜默丟棄」「候選只交棒不冒充已查證」可重複成立。
 
 ## Evidence Ledger 最小格式
@@ -94,6 +94,41 @@ Boya 維持人文社科研究者可讀、可手動介入的技能庫，不把每
 | lit-matrix | 0.0.3 | 2026-06-21 | 碩論 5 篇＋盲點缺口框法 | 盲點易滑成「首創」腦補、缺口要扣 RQ 需要的面向 | examples/2026-06-21-litmatrix-storm-lens.md |
 | lit-discovery | 0.5.0 Draft | 2026-06-21 | 公部門×生成式 AI，實打 OpenAlex／Crossref | 模糊檢索噪音、高被引≠相關、同論文多 DOI 副本、中文覆蓋稀疏夾離題、Crossref 回非論文 grant | examples/2026-06-21-litdiscovery-genai-public-sector.md |
 | framework-build | 0.0.2 Draft | 2026-06-22 | 作者碩論（立委助理×生成式 AI，TAM＋科技壓力＋社會影響），文獻已過 lit-matrix | 偽並列主框架（平鋪≠並列地位）、隱性遷移代價（✅支撐≠免遷移）、混合方法漏質性抓手 | examples/2026-06-22-framework-thesis.md |
+| framework-build | 0.1.0 Beta | 2026-06-22 | 社計博士生 LLM silicon sampling 知識論（批判實在論×四原則主義），人文思辨型首例 | 思辨版框架沙拉（跨哲學子域並列≠層數貪疊）、人文型操作化＝分析維度、老倫理框架跨域遷移代價、研究問題跨子域步驟 2 預警 | examples/2026-06-22-framework-humanist.md |
+
+## Evidence Ledger 紀錄（2026-06-22 framework-build 人文思辨型首例）
+
+### 2026-06-22 · framework-build · 跨哲學子域並列為思辨版框架沙拉
+
+- claim: 批判實在論（回答認識論）與四原則主義（回答規範倫理）回答的哲學問題不同，無法並列為同級主框架；並列即「思辨版框架沙拉」。
+- source: examples/2026-06-22-framework-humanist.md（LLM silicon sampling 知識論；候選表中批判實在論與四原則主義同列）。
+- check: 試跑把兩個框架並排作主視角——批判實在論答「LLM 能否代表社會真實」、四原則主義答「這樣做合不合倫理」，兩者回答不同哲學問題無法並列；改為批判實在論單一主視角，倫理問題收入「知識責任邊界」分析維度。
+- result: 通過。主視角唯一，四原則主義降為「論點」層入文末，說明自主原則失去著力點的論據功能。
+- next: 已寫回 SKILL.md 鐵律 3（框架沙拉的第②種隱形版：跨哲學子域並列）。
+
+### 2026-06-22 · framework-build · 人文思辨型的「操作化」是分析維度，不是問卷
+
+- claim: 人文思辨型 framework 的操作化落點是「從哪幾個面向審視爭議」（分析維度），不是問卷題目、假設命題或訪談提綱。
+- source: examples/2026-06-22-framework-humanist.md（批判實在論三層本體論＋三個分析維度）。
+- check: 若 skill 只給「用批判實在論」標籤而不指出「從什麼角度讀、看什麼、怎麼讀文本」，框架無法落地；本輪明確給出三個維度（生成機制可及性、層間跌落診斷、知識責任邊界），驗可接力 `outline-builder`。
+- result: 通過。三個分析維度可直接映射到論文各節標題，框架不懸空。
+- next: 已寫回 SKILL.md 鐵律 5（人文思辨型操作化分流：分析維度≠問卷）。
+
+### 2026-06-22 · framework-build · 老倫理框架套新 AI 場景的跨域遷移代價
+
+- claim: 有庫存支撐的倫理框架（四原則主義）套到設計前提不同的新場景（LLM silicon sampling）時，可能有核心概念直接失去著力點的跨域遷移代價，必須在理論代價欄標明。
+- source: examples/2026-06-22-framework-humanist.md（四原則主義「自主原則」預設真實研究對象能行使知情同意）。
+- check: 四原則的自主原則（尊重研究對象自主）設計前提是有真實受訪者；silicon sampling 根本沒有真實受訪者，自主原則直接失去著力點。此為「應用場景跨域遷移」而非「技術世代遷移」，與 TAM 案例同屬「✅支撐≠免遷移」但成因不同。
+- result: 通過。理論代價欄標明「自主原則失去著力點」，提示需以 AI 專屬倫理框架替代或重構。
+- next: 已寫回 SKILL.md 鐵律 1 延伸（「✅支撐≠免遷移」從技術世代延伸到應用場景跨域）。
+
+### 2026-06-22 · framework-build · 研究問題橫跨哲學子域須步驟 2 預警
+
+- claim: 若研究問題同時橫跨認識論與規範倫理兩個哲學子域，應在步驟 2「判論文類型」時主動標出分裂風險，給出收窄或整合選項，而非靜默讓研究者走入步驟 4 才發現並列衝動。
+- source: examples/2026-06-22-framework-humanist.md（研究問題同問「知識論正當性」與「倫理邊界」兩個子問題）。
+- check: 步驟 2 加入⚠️預警後，研究者在此步驟就收到「三條出口」（收窄選一／整合入單一視角的分析維度／明確承認雙主題），GATE 時不再面對臨時的並列衝動。
+- result: 通過。預警提前攔截，研究者在 GATE 能基於充分資訊拍板採納推薦（批判實在論單主視角）。
+- next: 已寫回 SKILL.md 步驟 2（⚠️跨哲學子域預警區塊＋三條解法）。
 
 ## Evidence Ledger 紀錄（2026-06-22 framework-build 文組實證題實測）
 
