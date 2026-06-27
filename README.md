@@ -20,7 +20,7 @@ Boya 幫你磨題、查引用、讀文獻、設計方法、搭大綱、修初稿
 [![Forks](https://img.shields.io/github/forks/DylanChiang-Dev/boya?style=for-the-badge&logo=github&color=42a5f5)](https://github.com/DylanChiang-Dev/boya/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-4caf50?style=for-the-badge)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7e57c2?style=for-the-badge)](#十五個-skill)
-[![version](https://img.shields.io/badge/version-0.5.0-7e57c2?style=for-the-badge)](MEMORY.md)
+[![version](https://img.shields.io/badge/version-0.5.1-7e57c2?style=for-the-badge)](MEMORY.md)
 [![繁體中文](https://img.shields.io/badge/繁體中文-First-e4002b?style=for-the-badge)](#)
 
 </div>
@@ -45,10 +45,12 @@ Boya 幫你磨題、查引用、讀文獻、設計方法、搭大綱、修初稿
 
 > ### AI 是副駕駛，不是機長。
 
+Boya 的最高設計原則是**人類在環（human-in-the-loop）**：流程可以自動接力，但每一個「只有你能決定」的關卡都會**硬停下來等你拍板**——這也是它和「全自動論文機」的唯一分界。底下四條，都是這個原則的展開。
+
 - **苦工外包，判斷自留。** skill 處理檢索、查核、格式、模擬提問；研究問題、方法選擇與詮釋，永遠是你的。
 - **凡引用必回源。** skill 只證明文獻存在，不證明它支持你的論點。
 - **透明而非遮掩。** 全部 skill 鼓勵留痕與 AI 使用揭露，目標是品質，不是隱藏協作事實。
-- **人工帶路，不是一鍵跑完。** 這不是全自動論文機——每一步 AI 幹活、你握方向盤。
+- **人類在環，不是一鍵跑完。** 這不是全自動論文機——流程會自己接力喚起下一步，但到「只有你能決定」的關卡就停；每一步 AI 幹活、你握方向盤。
 
 ## 🗺️ 工作流地圖
 
@@ -199,9 +201,11 @@ cp -r boya/skills/* ~/.cc-switch/skills/
 | 012 | [boya（原 research-roadmap）導航完整研究工作流](examples/2026-06-14-researchroadmap-workflow.md) | 抓到最大退化「目錄朗讀機」——要依產出物倒推、非按線性順序 |
 | 013 | [venue-fit 對標作者碩論與《公共行政學報》](examples/2026-06-18-venuefit-thesis-jpa.md) | 坐實「不編作者須知」與「學位論文轉期刊先判文稿類型」，venue-fit 升 Beta |
 | 014 | [framework-build 定錨日台半導體框架](examples/2026-06-21-framework-jasm.md) | 固化理論框架定錨：不堆框架沙拉、不編承重文獻、硬 GATE 讓研究者拍板主框架 |
+| 015 | [outline-builder 搭 silicon sampling 思辨型大綱](examples/2026-06-27-outlinebuilder-silicon-sampling.md) | 正向搭骨架實測 topic-sentence 前置，撞出思辨型兩坑：讓步句冒充主題句、段主題句覆讀章論點 |
 
 ## 🧱 設計原則
 
+- **人類在環（human-in-the-loop）**：全庫最高原則——流程會自動接力喚起下一步，但每個「只有你能決定」的關卡都硬停下來等你拍板。這是 boya 與「全自動論文機」的分界，底下其餘原則都服務於它。
 - **單文件 skill**：每個 skill 一個 `SKILL.md`，看得懂、改得動，歡迎 fork 改造成你的領域版本。
 - **不編造**：所有 skill 內建「查無即標註、不確定即說明」的硬規則。
 - **用—磨—寫**：每個 skill 都先拿真實材料跑、把坑寫回規則，才升版號——不閉門造框架。
@@ -250,5 +254,6 @@ cp -r boya/skills/* ~/.cc-switch/skills/
 - [**Supervisor-Skills**](https://github.com/HKUSTDial/Supervisor-Skills)（HKUST）—— 把導師判斷編碼成 skill、投稿前自審（模擬審查）的立意
 - **The AI Scientist**（Lu et al., 2024, [arXiv:2408.06292](https://arxiv.org/abs/2408.06292), Sakana AI）—— 全自動化研究的失敗模式
 - **Zhao et al.（2026）** —— 對幻覺引用的大規模實證
+- [**彭思達公開研究筆記**](https://pengsida.notion.site/c1a22465a0fa4b15a12985223916048e) —— 論文段落寫作方法（主題句前置、反向大綱）的理念啟發；僅借鑑方法理念，規則與行文原創重寫
 
 > 僅借鑑理念方向與問題意識，**提示語、結構、案例全部原創自製**——零內容轉述、不抄 prompt、不用截圖。這份分寸，也是本庫堅持的學術誠信。

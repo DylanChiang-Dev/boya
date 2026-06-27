@@ -95,6 +95,25 @@ Boya 維持人文社科研究者可讀、可手動介入的技能庫，不把每
 | lit-discovery | 0.5.0 Draft | 2026-06-21 | 公部門×生成式 AI，實打 OpenAlex／Crossref | 模糊檢索噪音、高被引≠相關、同論文多 DOI 副本、中文覆蓋稀疏夾離題、Crossref 回非論文 grant | examples/2026-06-21-litdiscovery-genai-public-sector.md |
 | framework-build | 0.0.2 Draft | 2026-06-22 | 作者碩論（立委助理×生成式 AI，TAM＋科技壓力＋社會影響），文獻已過 lit-matrix | 偽並列主框架（平鋪≠並列地位）、隱性遷移代價（✅支撐≠免遷移）、混合方法漏質性抓手 | examples/2026-06-22-framework-thesis.md |
 | framework-build | 0.1.0 Beta | 2026-06-22 | 社計博士生 LLM silicon sampling 知識論（批判實在論×四原則主義），人文思辨型首例 | 思辨版框架沙拉（跨哲學子域並列≠層數貪疊）、人文型操作化＝分析維度、老倫理框架跨域遷移代價、研究問題跨子域步驟 2 預警 | examples/2026-06-22-framework-humanist.md |
+| outline-builder | 0.0.4 | 2026-06-27 | silicon sampling 知識論（接力 framework-build 定錨框架），人文思辨型正向搭骨架＋topic-sentence 前置首跑 | 讓步句冒充主題句（思辨型）、段落主題句覆讀章論點 | examples/2026-06-27-outlinebuilder-silicon-sampling.md |
+
+## Evidence Ledger 紀錄（2026-06-27 outline-builder topic-sentence 前置首跑）
+
+### 2026-06-27 · outline-builder · topic-sentence 前置在思辨型須辨「讓步—反轉」
+
+- claim：正向設計關鍵段落時，把 claim 放首句（鐵律 6）能讓首句即點明本段 message。
+- source：examples/2026-06-27-outlinebuilder-silicon-sampling.md（接力 framework-build silicon sampling 框架，理論思辨型）。
+- check：在第 2 章「既有爭論共享被限縮提問層次」段實際擺位——機械前置會讓 Argyle 讓步句佔首句，與本段批評 message 相反。
+- result：通過但須補例外——思辨型「讓步—反轉」段，讓步可放首句但須緊跟轉折，不得讓對手觀點獨佔首句。
+- next：已寫回鐵律 6 與 SKILL 已知陷阱 9、eval 已暴露的坑。
+
+### 2026-06-27 · outline-builder · 段落主題句不得覆讀章核心論點
+
+- claim：message-first 是段落級，每段首句放本段獨有 claim。
+- source：同上 example，第 3 步章核心論點欄與第 4 步段落論證鏈交界。
+- check：試擺時把章核心論點複製成章內每段首句，導致段段覆述、無推進。
+- result：不通過該寫法——須區分章論點（章層）與段主題句（段層，章論點的下一步）。
+- next：已寫回鐵律 6、SKILL 已知陷阱 10、eval 已暴露的坑。
 
 ## Evidence Ledger 紀錄（2026-06-22 framework-build 人文思辨型首例）
 
@@ -195,3 +214,23 @@ Boya 維持人文社科研究者可讀、可手動介入的技能庫，不把每
 - check: OpenAlex `title.search` 中文關鍵詞「立法委員助理」count=2 且夾一筆離題日文；英文題撈到真候選但混入 cybersecurity 離題高被引、techrxiv 同論文兩個 DOI、Crossref 一筆 EU grant 非論文。
 - result: 通過。候選全為真實命中、無捏造；中文標 ❓導向華藝/國圖；弱相關（cybersecurity）標 ⚪ 低保留未砍；非論文 grant 剔除。
 - next: 已寫回 SKILL.md 鐵律＋已知陷阱 1–5 與 eval（MUST NOT 編造/冒充已查證/靜默丟棄/腦補首創）；列 0.5.0 Draft，升 Beta 待補不同學科或中文為主案例。
+
+## Evidence Ledger 紀錄（2026-06-24 借鑒 Auto-Empirical-Research-Skills）
+
+> 評估 `brycewang-stanford/Auto-Empirical-Research-Skills`（STEM／實證計量取向的超級聚合目錄，含 numeric benchmark、多 agent、Makefile/CI）。整套聚合與 pipeline 架構撞本庫設計邊界，**不採用**；只取兩個後設方法：①從 frontmatter 生成/核對路由的防漂移習慣 → `scripts/check-skills.py`；②「陷阱式」eval（給會踩坑的輸入測不上鉤）→ 三條 eval 新增「🪤 陷阱輸入」段。
+
+### 2026-06-24 · scripts/check-skills.py · frontmatter 契約＋ROUTER 同步防呆
+
+- claim: 「以 SKILL.md 為準」應可機器核對，而非僅口頭約定；契約硬規（兩欄 frontmatter／kebab-case／name=目錄名）與 ROUTER 同步可自動掃描。
+- source: scripts/check-skills.py 首跑全 15 skill + ROUTER.md（stdlib-only、唯讀、只報告）。
+- check: 跑 `python3 scripts/check-skills.py`；INFO 噪音過高時收緊誠信字樣偵測（編造/查無/需補…）由 12→9。
+- result: ERROR 0／WARN 0／INFO 9。硬規與結構同步全過；INFO 揭兩件待人工確認：style-tune description 無誠信/紅線字樣、venue-fit ROUTER 措辭「投稿前對標目標刊」與 description「投稿前幫我對標目標刊」差一詞。
+- next: 工具屬維護輔助（非 build 依賴），已入關鍵文件地圖；venue-fit 措辭與 style-tune 紅線交作者拍板。
+
+### 2026-06-24 · 三條陷阱式 eval · 從既有坑/RULES 推導、未實跑
+
+- claim: citation-verify／framework-build／style-tune 可各加一條「陷阱輸入」測不上鉤；陷阱須溯自既有「已暴露的坑」或 RULES，不憑空造。
+- source: evals/citation-verify.md、evals/framework-build.md、evals/style-tune.md 各新增「🪤 陷阱輸入」段；evals/README §設計原則 補陷阱慣例。
+- check: 逐條核對陷阱來源——查無判假（坑「查無≠偽造」）、庫外框架硬撐＋偽並列（坑「假地基」「偽並列主框架」）、規避偵測（RULES §1，政策推導）。
+- result: eval 結構已落地；前兩條溯自真實坑，第三條 style-tune 為政策推導、**尚未實跑**，已於該 eval 標註。
+- next: style-tune 另暴露 SKILL.md 缺「規避偵測」紅線（交作者拍板是否補鐵律）；補後須一次真實材料實跑才隨 skill 升 Beta。

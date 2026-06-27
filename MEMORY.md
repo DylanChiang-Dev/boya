@@ -2,6 +2,14 @@
 
 ## CHANGELOG
 
+### v0.5.1（2026-06-27）人類在環命名＋outline-builder topic-sentence 前置
+
+- **人類在環（human-in-the-loop）顯化**：把原「核心信念」第四條提升為全庫最高設計原則並命名。README 核心信念加分界句、第四條改名「人類在環，不是一鍵跑完」、設計原則段加總綱條；`CLAUDE.md` 設計邊界段前置一句立為「所有刻意不採用的總綱」；`AGENTS.md` 加首條核心設計原則。三處措辭對齊（CLAUDE／AGENTS 雙向同步硬規）。三語 README 未跟改（默認規則）。
+- **outline-builder 0.0.3→0.0.4**：補彭思達公開筆記的「段落 message 前置（topic sentence）」缺口——原本只在逆向體檢查「首句點題」，正向搭骨架沒教。新增鐵律 6＋第 4 步擺位提醒。借自 `Master-cai/Research-Paper-Writing-Skills` 上游的彭思達筆記理念，全部自行重寫。
+- 拿 silicon sampling 知識論題（接力 framework-build 人文思辨型框架）正向搭骨架實測，撞出兩個思辨型獨有坑並寫回：①讓步—反轉段讓步句不得獨佔首句（concession 冒充主題句）；②段落主題句不得覆讀章核心論點（message-first 是段落級）。
+- 配套：新增 `examples/2026-06-27-outlinebuilder-silicon-sampling.md`；`evals/outline-builder.md` 補 MUST／MUST NOT＋兩條已暴露的坑；`SKILL.md` 鐵律 6＋已知陷阱 9、10；`VERIFICATION.md` 狀態表＋兩條 Evidence Ledger。README 致謝補「彭思達公開研究筆記」、實測案例補 015。版本 badge 與 plugin.json（claude／codex）0.5.0→0.5.1。
+- 版本理由：outline-builder 實測修訂一輪，依 AGENTS.md 規則屬 `0.0.X` 打磨輪，倉庫版號尾號 +1。防呆 `scripts/check-skills.py`：0 ERROR／0 WARN。
+
 ### main（2026-06-23）期刊事實表・階段一 SSCI 全 10 學科群一次跑完（28 本）
 
 - 接續第 1 批，把 SSCI 階段 10 個學科群一次跑完（群 2–10 各取 2–3 本代表刊）：政治/IR、社會、傳播、STS、IS、教育、心理、管理/組織、法律/法政，共補 23 本，連同第 1 批 5 本＝28 本，全部寫入 venues.md。
