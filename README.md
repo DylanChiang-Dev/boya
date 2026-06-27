@@ -209,6 +209,21 @@ cp -r boya/skills/* ~/.cc-switch/skills/
 - **輕量參考層**：`VERIFICATION.md` 彙總實測證據，`knowledge/` 放 venue 與中文學術寫作速查卡，`templates/` 放可填空論文與口試骨架。
 - **不做重型自動化框架**：不引入 `_shared/` fragments、`manifest.yaml` 分片載入、多 agent 長跑 orchestrator；除非某個 skill 真的長到不可讀，才把少量共用材料外移。
 
+## 💬 加入討論
+
+有問題、用法回饋、想分享自己改的版本？歡迎進群聊：
+
+<table>
+<tr>
+<td align="center"><b>微信群</b><br/>博雅 skills<br/><sub>（二維碼有時效，過期請開 issue 回報，作者會更新）</sub></td>
+<td align="center"><b>Telegram 群</b></td>
+</tr>
+<tr>
+<td align="center"><img src="assets/wechat-group.jpg" width="220"/></td>
+<td align="center"><img src="assets/telegram-group.jpg" width="220"/></td>
+</tr>
+</table>
+
 ## ⭐ Star 趨勢
 
 如果這個倉庫幫到你，按顆星——讓更多卡在論文裡、身邊沒有人可商量的文組生看到它。
