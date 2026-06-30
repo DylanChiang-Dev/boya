@@ -183,7 +183,7 @@ cp -r boya/skills/* ~/.cc-switch/skills/
 
 每個 skill 都拿**真實研究材料**跑過、把暴露的坑寫回規則——多數用在作者自己那本碩士論文上，是一條工作流全鏈的真實示範。
 
-驗證狀態採三層：`Draft`（草稿，尚未形成證據鏈）、`Beta`（可用但仍在磨）、`Stable`（已用真實材料跑過並寫回規則）。目前 12 個 skill 為 **Stable**，`venue-fit` 為 **Beta**，`framework-build` 為 **Draft**；證據鏈、最小 evidence ledger、source map／action map 規格見 [`VERIFICATION.md`](VERIFICATION.md)。
+驗證狀態採三層：`Draft`（草稿，尚未形成證據鏈）、`Beta`（可用但仍在磨）、`Stable`（已用真實材料跑過並寫回規則）。目前 12 個 skill 為 **Stable**，`venue-fit`、`framework-build` 與 `lit-discovery` 為 **Beta**；證據鏈、最小 evidence ledger、source map／action map 規格見 [`VERIFICATION.md`](VERIFICATION.md)。
 
 | # | 案例 | 一句話戰果 |
 |---|---|---|
